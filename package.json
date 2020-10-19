@@ -1,0 +1,19 @@
+{
+  "name": "readme_generator",
+  "version": "1.0.0",
+  "description": "Package for readme generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CesarAugustoMartinez/README_Generator.git"
+  },
+  "author": "Cesar A Martinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CesarAugustoMartinez/README_Generator/issues"
+  },
+  "homepage": "https://github.com/CesarAugustoMartinez/README_Generator#readme"
+}
