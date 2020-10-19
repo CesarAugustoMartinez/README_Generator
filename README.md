@@ -50,7 +50,7 @@ Your task is to create a command-line application that dynamically generates a p
 
 ## License
 
-The application is covered under ISC license.
+The application is covered under : ![GitHub license](https://img.shields.io/badge/License-ISC-blue.svg)
 
 Copyright (c) [2020] [Cesar Martinez]
 
