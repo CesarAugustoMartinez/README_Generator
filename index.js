@@ -60,7 +60,7 @@ const questions = [
  
 // function to write README file
 function writeToFile(fileName, data) {
-
+    return fs.writeFileSync(fileName,data);
 
 }
 
@@ -71,6 +71,8 @@ function init() {
     .then(function(response){
         console.log(response);
         console.log(generateReadme(response));
+        writeToFile("README.md",generateReadme(response));
+
 
     })
     .catch(function(err){
@@ -92,7 +94,6 @@ const readmeContent =
 ## Description
 
 ${data.description}
-
 
 Link : [Project Link](https://github.com/${data.gitHub})
 
@@ -132,21 +133,13 @@ node index.js,
 
 ${data.usage}
 
-
-#### Screenshots
-
-- Navbar
-
-![picture](assets/images/Readme/Navbar.png)
-
-
 [Back To The Top](#${data.title.replace(" ","-")})
 
 ---
 
 ## License
 
-The application is covered under ${data.license} license.
+The application is covered under :![GitHub license](https://img.shields.io/badge/License-${data.license}-blue.svg).
 
 Copyright (c) [2020] [${data.authorName}]
 
@@ -154,9 +147,9 @@ Copyright (c) [2020] [${data.authorName}]
 
 ---
 
-## Constributing
+## Contributing
 
-${data.contributing}
+${data.contribution}
 
 [Back To The Top](#${data.title.replace(" ","-")})
 
@@ -179,19 +172,17 @@ ${data.test}
 ## Questions
 
 If you have any questions about the app or the respository, you can create an issue or contact me at ${data.email}.
-For more information of my projects you can visit: [${data.gitHub}](https://github.com/${data.github}/).
+For more information about projects you can visit my GitHub repository: [${data.gitHub}](https://github.com/${data.gitHub}/).
 
 [Back To The Top](#${data.title.replace(" ","-")})
 
 ---
 
-
 ## Author Info
 
-- ${data.authorName}.
-- Twitter -- [@cesaguma](https://twitter.com/cesaguma)
+- Name -- ${data.authorName}.
+- E-mail -- ${data.email}.
 - GitHub -- [${data.gitHub}](https://github.com/${data.gitHub})
-
 
 [Back To The Top](#${data.title.replace(" ","-")}) 
 `;
