@@ -1,98 +1,135 @@
-# Readme Generator 
+# Professional README Generator
 
-![GitHub license](https://img.shields.io/badge/License-ISC-blue.svg)
+![picture](/assets/images/appVideo.gif)
 
-## Description
-
-When creating an open source project on GitHub, it’s important to have a high-quality README for the app. This should include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions&mdash;this last part increases the likelihood that other developers will contribute to the success of the project. 
-
-Link : [Project Link](https://github.com/CesarAugustoMartinez)
+Link : [Project Link]( https://github.com/CesarAugustoMartinez/README_Generator)
 
 ---
 
-## Table of Contents
+### Table of Contents
 
 - [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
+- [How to Use](#how-to-use)
+- [Screenshots](#screenshots)
+- [References](#references)
 - [License](#license)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#tests)
 - [Author Info](#author-info)
 
 ---
 
-## Installation
+## Description
 
-To install necessary dependencies and load the app use the following command:
+The goal of this project is create a command-line application that dynamically generates a professional README.md file from a user's input using the [Inquire package](https://www.npmjs.com/package/inquirer). This app was builded using NODE.js code to generate a dynamically command-line app. 
 
-Commands 
+##### Technologies
 
-``` 
+- JavaScript
+- jQuery
+- Visual Studio Code
+- Node.js
+- Package.json
 
-npm install, node index.js
+##### Code sample - JavaScript
+#
 
-npm install 
-node index.js,
+```js
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(fileName,data);
+
+}
+
+
+// function to initialize program
+function init() {
+    inquirer.prompt(questions)
+    .then(function(response){
+        writeToFile("README.md",generateReadme(response));
+    })
+    .catch(function(err){
+        console.log(err);
+    })
+
+}
 
 ```
+##### Code sample - package.json
+#
+```json
+ {
+  "name": "readme_generator",
+  "version": "1.0.0",
+  "description": "Package for readme generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CesarAugustoMartinez/README_Generator.git"
+  },
+  "author": "Cesar A Martinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CesarAugustoMartinez/README_Generator/issues"
+  },
+  "homepage": "https://github.com/CesarAugustoMartinez/README_Generator#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+
+```
+---
+
+## How To Use
+
+This web application has a index.js file where the user will invoke it by using the commmand node index.js into the terminal. Once It has been invoked the app will ask for information aobut the project using inputs. For each prompt asked to the user It generate a specific section into the README.md file. This file will have sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions.
+ 
+## Screenshots
+
+- Command to run the app
+
+![picture](assets/images/run.png)
+
+- Simple Inputs 
+
+![picture](assets/images/simpleInputs.png)
+
+- Input with choices
+
+![picture](assets/images/choicesInput.png)
+
+- README file generated - sample
+
+![picture](assets/images/readmeFileGenerated.png)
+
+[Back To The Top](#Weather-Dashboard)
 
 ---
 
-## Usage
+## References
 
-Your task is to create a command-line application that dynamically generates a professional README.md file from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer). Review the [Good README Guide](../../01-HTML-Git-CSS/04-Important/Good-README-Guide/README.md) as a reminder of everything that a high-quality, professional README should contain.
+- w3school -- [Node.js NPM](https://www.w3schools.com/nodejs/nodejs_npm.asp)
+- NPM -- [Node Package Managment](https://www.npmjs.com/)
+- Node.js -- [About Node.js](https://nodejs.org/en/)
+- Node.js -- [The package.json guide](https://nodejs.dev/learn/the-package-json-guide)
 
-[Back To The Top](#Readme-Generator)
+
+[Back To The Top](#Professional-README-Generator)
 
 ---
 
 ## License
 
-The application is covered under : ![GitHub license](https://img.shields.io/badge/License-ISC-blue.svg)
+Copyright (c) [2020] [Cesar A Martinez]
 
-Copyright (c) [2020] [Cesar Martinez]
-
-[Back To The Top](#Readme-Generator)
-
----
-
-## Contributing
-
-undefined
-
-[Back To The Top](#Readme-Generator)
-
----
-
-## Tests
-
-To test, run the following command:
-
-```
-
-npm test
-
-```
-
-[Back To The Top](#Readme-Generator)
-
----
-
-## Questions
-
-If you have any questions about the app or the respository, you can create an issue or contact me at cesaguma@hotmail.com.
-For more information about projects you can visit my GitHub repository: [CesarAugustoMartinez](https://github.com/CesarAugustoMartinez/).
-
-[Back To The Top](#Readme-Generator)
+[Back To The Top](#Professional-README-Generator)
 
 ---
 
 ## Author Info
 
-- Cesar Martinez.
 - Twitter -- [@cesaguma](https://twitter.com/cesaguma)
+- Linkedin -- [Cesar A Martinez](https://www.linkedin.com/in/cesar-augusto-martinez-auquilla-03934a16b/)
 - GitHub -- [CesarAugustoMartinez](https://github.com/CesarAugustoMartinez)
 
-[Back To The Top](#Readme-Generator) 
+[Back To The Top](#Professional-README-Generator)
