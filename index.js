@@ -68,16 +68,23 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then(function(response){
-        console.log(response);
-        console.log(generateReadme(response));
         writeToFile("README.md",generateReadme(response));
-
-
     })
     .catch(function(err){
         console.log(err);
     })
 
+}
+
+function commandsIntallation(data) {
+  data = data.split(",");
+  data = data.map(function(element){
+    return element.trim();
+  })
+  commands = data.toString().replace(/,/g,"\n");
+  return (
+      `${commands}`
+    )  
 }
 
 // function call to initialize program
@@ -119,10 +126,7 @@ Commands
 
 \`\`\` 
 
-${data.installation}
-
-npm install 
-node index.js,
+${commandsIntallation(data.installation)}
 
 \`\`\`
 
