@@ -69,6 +69,7 @@ function init() {
     inquirer.prompt(questions)
     .then(function(response){
         writeToFile("README.md",generateReadme(response));
+        console.log("README.md file has been created!")
     })
     .catch(function(err){
         console.log(err);
