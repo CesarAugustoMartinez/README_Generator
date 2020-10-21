@@ -2,9 +2,7 @@
 
 ![picture](/assets/images/appVideo.gif)
 
-Link : [Project](https://cesaraugustomartinez.github.io/README_Generator/)\
-Link : [Video](https://cesaraugustomartinez.github.io/README_Generator/video.html)\
-Link : [Repository](https://github.com/CesarAugustoMartinez/README_Generator)\
+Links : [Project](https://cesaraugustomartinez.github.io/README_Generator/), [Video](https://cesaraugustomartinez.github.io/README_Generator/video.html)\, [Repository](https://github.com/CesarAugustoMartinez/README_Generator)
 
 ---
 
