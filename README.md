@@ -3,7 +3,7 @@
 ![picture](/assets/images/appVideo.gif)
 
 Link : [Project](https://github.com/CesarAugustoMartinez/README_Generator)\
-Link : [Video](https://github.com/CesarAugustoMartinez/video.html)
+Link : [Video](https://github.com/CesarAugustoMartinez/README_Generator/video.html)
 
 ---
 
